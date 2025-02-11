@@ -10,10 +10,13 @@ def _psub_alias(args, stdin=None, stdout=None, stderr=None):
 
 	parser = argparse.ArgumentParser(prog='psub')
 	parser.add_argument('-f', '--file', dest='fifo',
-		action='store_false', default=False)
+		action='store_false', default=False,
+		help='Use a regular file')
 	parser.add_argument('-F', '--fifo', dest='fifo',
-		action='store_true', default=False)
-	parser.add_argument('-s', '--suffix', default='')
+		action='store_true', default=False,
+		help='Use a named pipe')
+	parser.add_argument('-s', '--suffix', default='',
+		help='Suffix of the file name')
 	args = parser.parse_args(args)
 
 	if stdin is None:
