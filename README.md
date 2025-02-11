@@ -1,4 +1,4 @@
-Fish style process substitution for xonsh
+Fish style process substitution ([psub](https://fishshell.com/docs/current/cmds/psub.html)) for xonsh.
 
 ## Installation
 
